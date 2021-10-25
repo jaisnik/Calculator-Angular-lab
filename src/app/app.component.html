@@ -1,0 +1,44 @@
+
+<div style="display: flex;justify-content: space-between;align-items: center;flex-direction: column;height: 98vh;">
+  <mat-toolbar color="accent" style="display: flex;justify-content: center;align-items: center;">
+    <span >My Angular Calculator</span>
+  </mat-toolbar>
+  
+  <mat-card style="width: 400px;height: 610px;background-color: #3F51B5; padding: 2px;">
+    <input matInput #inval maxlength="7" placeholder="Ex. 94105" value="{{inputVal}}" style="width: 100%;height: 10%;margin: 0;padding-right: 0;border: 0;">
+    <mat-grid-list cols= "3" rowHeight="90px"  >
+      <!-- // Row 1 -->
+      <mat-grid-tile><button mat-stroked-button (click)="operate('+')" style="width: 90%; height: 90%;color:white;">+</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="operate('-')"style="width: 90%;height: 90%;color:white;">-</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="operate('/')" style="width: 90%;height: 90%;color:white;">/</button></mat-grid-tile>
+      <!-- Row 2 -->
+      <mat-grid-tile><button mat-stroked-button (click)="operate('*')" style="width: 90%; height: 90%;color:white;">*</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="calcFactorial()" style="width: 90%; height: 90%;color:white;">!</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="operate('%')" style="width: 90%; height: 90%;color:white;">%</button></mat-grid-tile>
+      <!-- Row 3 -->
+      <mat-grid-tile><button mat-stroked-button (click)="inVal(1)" style="width: 90%; height: 90%;color:white;">1</button></mat-grid-tile>
+     
+      <mat-grid-tile><button mat-stroked-button (click)="inVal(2)" style="width: 90%; height: 90%;color:white;">2</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="inVal(3)" style="width: 90%; height: 90%;color:white;">3</button></mat-grid-tile>
+        <!-- Row 4 -->
+        <mat-grid-tile><button mat-stroked-button (click)="inVal(4)" style="width: 90%; height: 90%;color:white;">4</button></mat-grid-tile>
+        <mat-grid-tile><button mat-stroked-button (click)="inVal(5)" style="width: 90%; height: 90%;color:white;">5</button></mat-grid-tile>
+        <mat-grid-tile><button mat-stroked-button (click)="inVal(6)" style="width: 90%; height: 90%;color:white;">6</button></mat-grid-tile>
+          <!-- Row 5 -->
+      <mat-grid-tile><button mat-stroked-button (click)="inVal(7)" style="width: 90%; height: 90%;color:white;">7</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="inVal(8)" style="width: 90%; height: 90%;color:white;">8</button></mat-grid-tile>
+      <mat-grid-tile><button mat-stroked-button (click)="inVal(9)" style="width: 90%; height: 90%; color:white;">9</button></mat-grid-tile>
+        <!-- Row 6 -->
+        <mat-grid-tile><button mat-stroked-button (click)="inVal(0)" style="width: 90%; height: 90%;color:white;">0</button></mat-grid-tile>
+        <mat-grid-tile colspan="2"><button mat-raised-button (click)="findAns()" color="accent" style="width: 90%; height: 90%;">=</button></mat-grid-tile>
+        
+    </mat-grid-list>
+  </mat-card>
+
+</div>
+
+
+
+
+
+
